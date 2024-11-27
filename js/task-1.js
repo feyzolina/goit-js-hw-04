@@ -1,10 +1,8 @@
 function isEnoughCapacity(products, containerSize) {
     let total = 0;
 
-    for (const key in products) {
-        if (products.hasOwnProperty(key)) {
-            total += products[key]; 
-        }
+    for (const key of Object.keys(products)) {
+        total += products[key];
     }
 
     return total <= containerSize;
